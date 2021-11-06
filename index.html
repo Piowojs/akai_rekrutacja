@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AKAI Frontend Task</title>
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<meta name="viewport" charset="utf-8" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+    <!--
+        ...
+        ...
+        ...
+    -->
+
+	<!-- początek formularza -->
+
+
+	<!-- element section ma ID "task-frontend". Może to się nam przydać m.in. podczas stylowania dokumentu -->
+	<section id="task-frontend">
+			<img src="logo.svg" alt="logo">
+		<!-- element span otrzymuje klasę "basic-title". Klasa ta może być wykorzystywana w wielu różnych elementach -->
+
+		<span class="basic-title">Formularz rekrutacyjny</span>
+
+
+		<form name="rekrutacja" onsubmit="return validateForm()" method="POST">
+
+			<!-- od użytkownika pobieramy imię, nazwisko, email oraz informację, do jakiej sekcji chce dołączyć -->
+
+			<label for="first-name"></label>
+		    <input type="text" id="first-name" placeholder="Imię"/>
+
+            <label for="last-name"></label>
+		    <input type="text" id="last-name" placeholder="Nazwisko"/>
+
+			<label for="email"></label>
+		    <input type="email" id="email" placeholder="Email"/>
+
+			<span>Wybierz sekcje:</span>
+			<div class="grid" name="checkboxes">
+
+            <label for="frontend-checkbox">
+							<input type="checkbox" id="frontend-checkbox" name="section" value="frontend">
+							Frontend</label>
+
+            <label for="backend-checkbox">
+							<input type="checkbox" id="backend-checkbox" name="section" value="frontend">
+							Backend</label>
+
+            <label for="mobile-checkbox">
+							<input type="checkbox" id="mobile-checkbox" name="section" value="frontend">
+							Mobile</label>
+
+            <label for="graphics-checkbox">
+							<input type="checkbox" id="graphics-checkbox" name="section" value="frontend">
+							Grafika</label>
+					</div>
+					<input class="btn" type="submit" value="Prześlij">
+		</form>
+		
+
+
+	</section>
+	<!-- koniec formularza -->
+
+    <!--
+        ...
+        ...
+        ...
+    -->
+
+
+<!-- zaimportowanie pliku z kodem javascript, który dokona walidacji danych (zadanie JS) -->
+<script type="text/javascript" src="js/validation.js"></script>
+
+</body>
+</html>
